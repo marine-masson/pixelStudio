@@ -15,7 +15,7 @@ function Pixel(x ,y ,size ,color){
 	this.set_position(x,y);
 	this.set_color(color || 'red');
 
-	$('#container').append(this.$el);
+	pixelStudio.$draw.append(this.$el);
 };
 
 Pixel.prototype ={
@@ -28,8 +28,8 @@ Pixel.prototype ={
 		this.x = x;
 		this.y = y;
 		this.$el.css({
-			top : ((this.x-1)*this.size) + 'px',
-			left : ((this.y-1)*this.size) + 'px',
+			top : ((this.y-1)*this.size) + 'px',
+			left : ((this.x-1)*this.size) + 'px',
 		})
 	},
 	/**
